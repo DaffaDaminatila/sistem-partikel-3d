@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gesture-Based 3D Particles</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div id="canvas-container"></div>
+
+  <!-- UI Overlay -->
+  <div id="ui-container">
+    <div id="controls-panel">
+      <h1>Particle Controls</h1>
+
+      <div class="control-group">
+        <label>Pattern</label>
+        <div class="button-group" id="pattern-buttons">
+          <button data-pattern="sphere" class="active">Sphere</button>
+          <button data-pattern="cube">Cube</button>
+          <button data-pattern="ring">Ring</button>
+          <button data-pattern="love">Love</button>
+          <!-- Add more patterns here -->
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label>Color</label>
+        <input type="color" id="color-picker" value="#00ffff">
+      </div>
+
+      <div class="control-group">
+        <button id="fullscreen-btn">Toggle Fullscreen</button>
+      </div>
+
+      <div id="status">
+        Waiting for camera...
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden video element for MediaPipe -->
+  <video id="webcam" style="display: none;" autoplay playsinline></video>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
